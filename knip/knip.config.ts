@@ -11,12 +11,10 @@ const config: KnipConfig = {
   workspaces: {
     '.': {
       entry: ['bunfig.toml'],
+      ignoreDependencies: ['@tobiasherlitz/dev-tooling'],
     },
     'packages/*': {
       entry: ['eslint.config.{js,ts}'],
-    },
-    'packages/dev-tooling': {
-      ignoreDependencies: ['prettier', 'bun-types'],
     },
   },
 };
